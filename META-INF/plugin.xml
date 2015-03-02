@@ -1,0 +1,52 @@
+<idea-plugin version="2">
+    <id>com.brainwy.pyvmmonitor</id>
+    <name>PyVmMonitor PyCharm integration</name>
+    <version>1.0</version>
+    <vendor email="fabiofz@gmail.com" url="http://pyvmmonitor.com">PyVmMonitor</vendor>
+
+    <description><![CDATA[
+      This plugins enables the integration of PyVmMonitor with PyCharm.<br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.python</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <runConfigurationExtension implementation="com.brainwy.pyvmmonitor.PyVmMonitorRunExtension"/>
+        <configurationType implementation="com.brainwy.pyvmmonitor.PyVmMonitorConfigurationType"/>
+    </extensions>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <group id="PyVmMonitor.menu" text="_PyVmMonitor" description="PyVmMonitor menu">
+            <add-to-group group-id="MainMenu" anchor="last"  />
+            <action id="Myplugin.Textboxes" class="com.brainwy.pyvmmonitor.ToggleProfileAction" text="Text _Boxes" description="A test menu item" />
+            <action id="Myplugin.Dialogs" class="com.brainwy.pyvmmonitor.ToggleProfileAction" text="Show _Dialog" description="A test menu item" />
+        </group>
+
+        <!-- Add your actions here -->
+        <action id="com.brainwy.pyvmmonitor.ToggleProfileAction" class="com.brainwy.pyvmmonitor.ToggleProfileAction"
+                text="Toggles Profiling with PyVmMonitor" description="Enable/Disable profiling with PyVmMonitor"/>
+    </actions>
+
+</idea-plugin>
