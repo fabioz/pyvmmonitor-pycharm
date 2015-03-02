@@ -13,8 +13,8 @@ import javax.swing.*;
 public class PyVmMonitorConfigurationType extends ConfigurationTypeBase{
     private final PyVmMonitorPythonConfigurationFactory myFactory = new PyVmMonitorPythonConfigurationFactory(this);
 
-    protected PyVmMonitorConfigurationType(@NotNull String id, String displayName, String description, Icon icon) {
-        super(id, displayName, description, icon);
+    protected PyVmMonitorConfigurationType() {
+        super("PyVmMonitorConfigurationType", "PyVmMonitorConfigurationTypeDisplayName", "PyVmMonitorConfigurationTypeDescription", null);
     }
 
     public static PyVmMonitorConfigurationType getInstance() {
