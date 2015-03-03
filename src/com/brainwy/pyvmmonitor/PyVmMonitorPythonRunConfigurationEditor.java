@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 
 /**
- * This will provide us with an editor to show to the user
+ * This will provide us with an editor to show to the user. Mostly, this is just a wrapper for the form...
  */
 public class PyVmMonitorPythonRunConfigurationEditor extends SettingsEditor<PyVmMonitorPythonRunConfiguration> {
 
