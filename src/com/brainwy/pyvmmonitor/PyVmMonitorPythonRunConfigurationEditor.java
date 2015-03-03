@@ -21,11 +21,11 @@ public class PyVmMonitorPythonRunConfigurationEditor extends SettingsEditor<PyVm
     }
 
     protected void resetEditorFrom(final PyVmMonitorPythonRunConfiguration config) {
-        PythonRunConfiguration.copyParams(config, myForm);
+        PyVmMonitorPythonRunConfiguration.copyParams1(config, myForm);
     }
 
     protected void applyEditorTo(final PyVmMonitorPythonRunConfiguration config) throws ConfigurationException {
-        PythonRunConfiguration.copyParams(myForm, config);
+        PyVmMonitorPythonRunConfiguration.copyParams1(myForm, config);
     }
 
     @NotNull

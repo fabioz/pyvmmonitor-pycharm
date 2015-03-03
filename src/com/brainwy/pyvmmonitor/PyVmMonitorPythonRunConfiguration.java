@@ -9,13 +9,21 @@ import com.intellij.execution.configurations.RunProfileState;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.openapi.options.SettingsEditor;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.util.InvalidDataException;
+import com.intellij.openapi.util.JDOMExternalizerUtil;
+import com.intellij.openapi.util.WriteExternalException;
+import com.jetbrains.python.run.AbstractPythonRunConfiguration;
 import com.jetbrains.python.run.PythonRunConfiguration;
+import com.jetbrains.python.run.PythonRunConfigurationParams;
+import org.jdom.Element;
 import org.jetbrains.annotations.NotNull;
 
 /**
  * This is the run configuration (has the editor and preferences which show at run > edit configurations).
  */
-public class PyVmMonitorPythonRunConfiguration extends PythonRunConfiguration {
+public class PyVmMonitorPythonRunConfiguration extends PythonRunConfiguration implements PyVmMonitorPythonRunConfigurationParams{
+    public static final String INITIAL_PROFILE_MODE = "INITIAL_PROFILE_MODE";
+    private int myInitialProfileMode;
 
     protected PyVmMonitorPythonRunConfiguration(Project project, ConfigurationFactory configurationFactory) {
         super(project, configurationFactory);
@@ -29,5 +37,32 @@ public class PyVmMonitorPythonRunConfiguration extends PythonRunConfiguration {
     @Override
     public RunProfileState getState(@NotNull Executor executor, @NotNull ExecutionEnvironment env) throws ExecutionException {
         return new PyVmMonitorPythonScriptCommandLineState(this, env);
+    }
+
+    @Override
+    public void readExternal(Element element) throws InvalidDataException {
+        super.readExternal(element);
+        myInitialProfileMode = Integer.parseInt(JDOMExternalizerUtil.readField(element, INITIAL_PROFILE_MODE, "0"));
+    }
+
+    @Override
+    public void writeExternal(Element element) throws WriteExternalException {
+        JDOMExternalizerUtil.writeField(element, INITIAL_PROFILE_MODE, Integer.toString(myInitialProfileMode));
+        super.writeExternal(element);
+    }
+
+    public static void copyParams1(PyVmMonitorPythonRunConfigurationParams source, PyVmMonitorPythonRunConfigurationParams target) {
+        PythonRunConfiguration.copyParams(source, target);
+        target.setInitialProfileMode(source.getInitialProfileMode());
+    }
+
+    @Override
+    public int getInitialProfileMode() {
+        return myInitialProfileMode;
+    }
+
+    @Override
+    public void setInitialProfileMode(int initialProfileMode) {
+        myInitialProfileMode = initialProfileMode;
     }
 }

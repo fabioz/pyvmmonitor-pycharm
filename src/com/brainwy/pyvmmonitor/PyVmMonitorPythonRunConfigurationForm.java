@@ -23,7 +23,7 @@ import java.awt.*;
  * Form to be shown to the user in the editor. Similar to PythonRunConfigurationForm but with options related
  * to running PyVmMonitor.
  */
-public class PyVmMonitorPythonRunConfigurationForm implements PythonRunConfigurationParams, PanelWithAnchor {
+public class PyVmMonitorPythonRunConfigurationForm implements PyVmMonitorPythonRunConfigurationParams, PanelWithAnchor {
 
     private JPanel myRootPanel;
     private TextFieldWithBrowseButton myScriptTextField;
@@ -34,10 +34,15 @@ public class PyVmMonitorPythonRunConfigurationForm implements PythonRunConfigura
     private JComponent anchor;
     private final Project myProject;
     private JBCheckBox myShowCommandLineCheckbox;
+    private JLabel myInitialProfileModeLabel;
+    private JComboBox myInitialProfileModeCombo;
 
     public PyVmMonitorPythonRunConfigurationForm(PythonRunConfiguration configuration) {
         myCommonOptionsForm = PyCommonOptionsFormFactory.getInstance().createForm(configuration.getCommonOptionsFormData());
         myCommonOptionsPlaceholder.add(myCommonOptionsForm.getMainPanel(), BorderLayout.CENTER);
+        myInitialProfileModeCombo.addItem("Deterministic (profile)");
+        myInitialProfileModeCombo.addItem("Sampling (yappi)");
+        myInitialProfileModeCombo.addItem("Don't start profiling");
 
         myProject = configuration.getProject();
 
@@ -63,6 +68,17 @@ public class PyVmMonitorPythonRunConfigurationForm implements PythonRunConfigura
 
         setAnchor(myCommonOptionsForm.getAnchor());
     }
+
+    @Override
+    public int getInitialProfileMode() {
+        return myInitialProfileModeCombo.getSelectedIndex();
+    }
+
+    @Override
+    public void setInitialProfileMode(int initialProfileMode) {
+        myInitialProfileModeCombo.setSelectedIndex(initialProfileMode);
+    }
+
 
     public JComponent getPanel() {
         return myRootPanel;
@@ -121,4 +137,5 @@ public class PyVmMonitorPythonRunConfigurationForm implements PythonRunConfigura
         myScriptParametersLabel.setAnchor(anchor);
         myCommonOptionsForm.setAnchor(anchor);
     }
+
 }

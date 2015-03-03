@@ -19,8 +19,11 @@ import java.util.List;
  * Everything else is just scaffolding to get to this class...
  */
 public class PyVmMonitorPythonScriptCommandLineState extends PythonScriptCommandLineState {
+    private final PyVmMonitorPythonRunConfiguration myConfig;
+
     public PyVmMonitorPythonScriptCommandLineState(PyVmMonitorPythonRunConfiguration pyVmMonitorPythonRunConfiguration, ExecutionEnvironment env) {
         super(pyVmMonitorPythonRunConfiguration, env);
+        myConfig = pyVmMonitorPythonRunConfiguration;
     }
 
     @NotNull
@@ -33,7 +36,10 @@ public class PyVmMonitorPythonScriptCommandLineState extends PythonScriptCommand
             @Override
             public void patchCommandLine(GeneralCommandLine commandLine) {
                 //TODO: This is the place where things actually happen (i.e.: we add the parameters to run with PyVmMonitor).
-                commandLine.getParametersList().getParamsGroup(PythonCommandLineState.GROUP_DEBUGGER).addParameterAt(0, "my.test.py");
+                int initialProfileMode = myConfig.getInitialProfileMode();
+                ParamsGroup paramsGroup = commandLine.getParametersList().getParamsGroup(PythonCommandLineState.GROUP_DEBUGGER);
+                paramsGroup.addParameterAt(0, "my.test.py");
+                paramsGroup.addParameter(Integer.toString(initialProfileMode));
             }
         }));
     }
