@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f6775d4-d47b-4950-8358-ba07df5e2119" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationParams.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/Log.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorConfigurationType.java" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorConfigurationType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfiguration.java" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationEditor.java" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationEditor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.form" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.java" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationParams.java" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationParams.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonScriptCommandLineState.java" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonScriptCommandLineState.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PyVmMonitorPythonRunConfigurationForm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PyVmMonitorPythonRunConfigurationForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39620253" vertical-offset="122" max-vertical-offset="2205">
-              <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2610">
+              <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,11 +46,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PythonRunConfigurationExtensionsManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonRunConfigurationExtensionsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.51724136" vertical-offset="0" max-vertical-offset="667">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunConfigurationExtensionsManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://C:/x/intellij-community/platform/lang-api/src/com/intellij/execution/configuration/RunConfigurationExtensionsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1563" max-vertical-offset="2460">
+              <caret line="148" column="37" selection-start-line="148" selection-start-column="37" selection-end-line="148" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PyVmMonitorPythonRunConfiguration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="1095">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="545" max-vertical-offset="1335">
+              <caret line="48" column="94" selection-start-line="48" selection-start-column="94" selection-end-line="48" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,38 +81,8 @@
       <file leaf-file-name="PyVmMonitorPythonRunConfigurationParams.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationParams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PythonScriptCommandLineState.java" pinned="false" current-in-tab="false">
-        <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonScriptCommandLineState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1535" max-vertical-offset="2295">
-              <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PyVmMonitorPythonRunConfigurationEditor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationEditor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-              <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PythonRunConfigurationEditor.java" pinned="false" current-in-tab="false">
-        <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonRunConfigurationEditor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="780">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,19 +91,21 @@
       <file leaf-file-name="PyVmMonitorPythonScriptCommandLineState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonScriptCommandLineState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-              <caret line="41" column="78" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+              <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PythonRunConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonRunConfiguration.java">
+      <file leaf-file-name="PyVmMonitorRunExtension.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="2250">
-              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="1215">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,14 +126,15 @@
         <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/ToggleProfileAction.java" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java" />
-        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorConfigurationType.java" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PythonRunConfigurationParams.java" />
-        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.form" />
-        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.java" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationEditor.java" />
-        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonScriptCommandLineState.java" />
+        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.form" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationParams.java" />
+        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonScriptCommandLineState.java" />
+        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorConfigurationType.java" />
+        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/Log.java" />
+        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.java" />
       </list>
     </option>
   </component>
@@ -650,23 +644,23 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17122594" sideWeight="0.46510416" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.295846" sideWeight="0.46510416" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17122594" sideWeight="0.53489584" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.295846" sideWeight="0.53489584" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20052083" sideWeight="0.7090465" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20162107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20052083" sideWeight="0.7079137" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39817628" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20052083" sideWeight="0.29095355" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22289766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20052083" sideWeight="0.29208633" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52279633" sideWeight="0.73072916" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -760,8 +754,14 @@
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://C:/x/intellij-community/platform/lang-api/src/com/intellij/execution/configuration/RunConfigurationExtensionsManager.java</url>
+          <line>148</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -770,84 +770,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/x/intellij-community/platform/platform-api/src/com/intellij/openapi/options/SettingsEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="1836">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonConfigurationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21700224" vertical-offset="316" max-vertical-offset="1224">
-          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonConfigurationFactoryBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3803132" vertical-offset="0" max-vertical-offset="894">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/testing/AbstractPythonTestRunConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80501395" vertical-offset="148" max-vertical-offset="11286">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/testing/PythonTestConfigurationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2896936" vertical-offset="460" max-vertical-offset="4884">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/testing/unittest/PythonUnitTestRunConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68941504" vertical-offset="264" max-vertical-offset="3729">
-          <caret line="35" column="78" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/testing/pytest/PyTestRunConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7729805" vertical-offset="171" max-vertical-offset="4851">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/x/intellij-community/platform/lang-api/src/com/intellij/execution/configurations/ConfigurationTypeBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33263817" vertical-offset="225" max-vertical-offset="1292">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="969">
-          <caret line="27" column="80" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/bin/PyCharm4.0.4/lib/pycharm.jar!/META-INF/python-core.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9335" max-vertical-offset="12903">
-          <caret line="560" column="107" selection-start-line="560" selection-start-column="107" selection-end-line="560" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonRunConfigurationExtension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32922536" vertical-offset="0" max-vertical-offset="568">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/x/intellij-community/platform/lang-impl/src/com/intellij/execution/ExecutorRegistryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="4471">
@@ -947,40 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonCommandLineState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6273585" vertical-offset="1658" max-vertical-offset="6953">
-          <caret line="188" column="55" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/ToggleProfileAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorConfigurationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1377">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="1215">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/x/intellij-community/platform/core-api/src/com/intellij/openapi/components/ServiceManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="915">
@@ -1030,6 +918,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5203" max-vertical-offset="15255">
           <caret line="403" column="0" selection-start-line="403" selection-start-column="0" selection-end-line="403" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,30 +950,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonRunConfigurationEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="780">
+        <state vertical-scroll-proportion="0.49367088" vertical-offset="0" max-vertical-offset="790">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonRunConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="2250">
+        <state vertical-scroll-proportion="-0.7392405" vertical-offset="1034" max-vertical-offset="2250">
           <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
           <folding />
         </state>
@@ -1100,16 +976,8 @@
     </entry>
     <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonScriptCommandLineState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1535" max-vertical-offset="2295">
+        <state vertical-scroll-proportion="0.886076" vertical-offset="1505" max-vertical-offset="2295">
           <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonScriptCommandLineState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="41" column="78" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -1122,18 +990,139 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/ToggleProfileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28481013" vertical-offset="0" max-vertical-offset="790">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/platform/platform-impl/src/com/intellij/notification/EventLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7155">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/platform/platform-impl/src/com/intellij/notification/LogModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="500" max-vertical-offset="2295">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/platform/platform-api/src/com/intellij/notification/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29151943" vertical-offset="540" max-vertical-offset="2355">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/platform/platform-impl/src/com/intellij/notification/EventLogConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35865724" vertical-offset="997" max-vertical-offset="3555">
+          <caret line="112" column="37" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/plugins/maven/src/main/java/org/jetbrains/idea/maven/navigator/actions/MavenExecuteGoalAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="847" max-vertical-offset="1635">
+          <caret line="104" column="54" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/platform/platform-api/src/com/intellij/notification/Notifications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="1335">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/bin/jdk1.8.0_25/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33215547" vertical-offset="3322" max-vertical-offset="8430">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/bin/jdk1.8.0_25/src.zip!/java/io/ByteArrayOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.795053" vertical-offset="2745" max-vertical-offset="4140">
+          <caret line="213" column="40" selection-start-line="213" selection-start-column="40" selection-end-line="213" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2278481" vertical-offset="0" max-vertical-offset="790">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonCommandLineState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25949368" vertical-offset="1655" max-vertical-offset="6345">
+          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorConfigurationType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6949367" vertical-offset="306" max-vertical-offset="1605">
+          <caret line="57" column="76" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationParams.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonScriptCommandLineState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="42" column="65" selection-start-line="42" selection-start-column="65" selection-end-line="42" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="1095">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="545" max-vertical-offset="1335">
+          <caret line="48" column="94" selection-start-line="48" selection-start-column="94" selection-end-line="48" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1142,11 +1131,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39620253" vertical-offset="122" max-vertical-offset="2205">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2610">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="1215">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/platform/lang-api/src/com/intellij/execution/configuration/RunConfigurationExtensionsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1563" max-vertical-offset="2460">
+          <caret line="148" column="37" selection-start-line="148" selection-start-column="37" selection-end-line="148" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/x/intellij-community/python/src/com/jetbrains/python/run/PythonRunConfigurationExtensionsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51724136" vertical-offset="0" max-vertical-offset="667">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

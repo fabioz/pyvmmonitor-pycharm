@@ -40,6 +40,7 @@ public class PyVmMonitorPythonScriptCommandLineState extends PythonScriptCommand
                 ParamsGroup paramsGroup = commandLine.getParametersList().getParamsGroup(PythonCommandLineState.GROUP_DEBUGGER);
                 paramsGroup.addParameterAt(0, "my.test.py");
                 paramsGroup.addParameter(Integer.toString(initialProfileMode));
+                paramsGroup.addParameter(myConfig.getPyVmMonitorLocation());
             }
         }));
     }

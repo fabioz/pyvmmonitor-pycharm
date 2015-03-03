@@ -11,4 +11,8 @@ public interface PyVmMonitorPythonRunConfigurationParams extends PythonRunConfig
     int getInitialProfileMode();
 
     void setInitialProfileMode(int initialProfileMode);
+
+    void setPyVmMonitorLocation(String location);
+
+    String getPyVmMonitorLocation();
 }

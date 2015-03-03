@@ -23,7 +23,10 @@ import org.jetbrains.annotations.NotNull;
  */
 public class PyVmMonitorPythonRunConfiguration extends PythonRunConfiguration implements PyVmMonitorPythonRunConfigurationParams{
     public static final String INITIAL_PROFILE_MODE = "INITIAL_PROFILE_MODE";
+    public static final String PY_VM_MONITOR_LOCATION = "PY_VM_MONITOR_LOCATION";
+
     private int myInitialProfileMode;
+    private String myPyVmMonitorLocation;
 
     protected PyVmMonitorPythonRunConfiguration(Project project, ConfigurationFactory configurationFactory) {
         super(project, configurationFactory);
@@ -43,17 +46,30 @@ public class PyVmMonitorPythonRunConfiguration extends PythonRunConfiguration im
     public void readExternal(Element element) throws InvalidDataException {
         super.readExternal(element);
         myInitialProfileMode = Integer.parseInt(JDOMExternalizerUtil.readField(element, INITIAL_PROFILE_MODE, "0"));
+        myPyVmMonitorLocation = JDOMExternalizerUtil.readField(element, PY_VM_MONITOR_LOCATION);
     }
 
     @Override
     public void writeExternal(Element element) throws WriteExternalException {
         JDOMExternalizerUtil.writeField(element, INITIAL_PROFILE_MODE, Integer.toString(myInitialProfileMode));
+        JDOMExternalizerUtil.writeField(element, PY_VM_MONITOR_LOCATION, myPyVmMonitorLocation);
         super.writeExternal(element);
     }
 
     public static void copyParams1(PyVmMonitorPythonRunConfigurationParams source, PyVmMonitorPythonRunConfigurationParams target) {
         PythonRunConfiguration.copyParams(source, target);
         target.setInitialProfileMode(source.getInitialProfileMode());
+        target.setPyVmMonitorLocation(source.getPyVmMonitorLocation());
+    }
+
+    @Override
+    public void setPyVmMonitorLocation(String location) {
+        this.myPyVmMonitorLocation = location;
+    }
+
+    @Override
+    public String getPyVmMonitorLocation() {
+        return this.myPyVmMonitorLocation;
     }
 
     @Override

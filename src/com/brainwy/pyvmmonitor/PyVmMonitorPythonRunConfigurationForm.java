@@ -18,6 +18,8 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Form to be shown to the user in the editor. Similar to PythonRunConfigurationForm but with options related
@@ -36,6 +38,8 @@ public class PyVmMonitorPythonRunConfigurationForm implements PyVmMonitorPythonR
     private JBCheckBox myShowCommandLineCheckbox;
     private JLabel myInitialProfileModeLabel;
     private JComboBox myInitialProfileModeCombo;
+    private JLabel myPyVmMonitorLocationLabel;
+    private TextFieldWithBrowseButton myPyVmMonitorLocationTextField;
 
     public PyVmMonitorPythonRunConfigurationForm(PythonRunConfiguration configuration) {
         myCommonOptionsForm = PyCommonOptionsFormFactory.getInstance().createForm(configuration.getCommonOptionsFormData());
@@ -66,7 +70,30 @@ public class PyVmMonitorPythonRunConfigurationForm implements PyVmMonitorPythonR
 
         myScriptTextField.addActionListener(listener);
 
+        ComponentWithBrowseButton.BrowseFolderActionListener<JTextField> listenerPyVmMonitorLocation =
+                new ComponentWithBrowseButton.BrowseFolderActionListener<JTextField>("Select pyvmmonitor-ui location", "", myPyVmMonitorLocationTextField, myProject,
+                        chooserDescriptor, TextComponentAccessor.TEXT_FIELD_WHOLE_TEXT) {
+
+                    @Override
+                    protected void onFileChosen(@NotNull VirtualFile chosenFile) {
+                        super.onFileChosen(chosenFile);
+                        setPyVmMonitorLocation(chosenFile.getParent().getPath());
+                    }
+                };
+
+        myPyVmMonitorLocationTextField.addActionListener(listenerPyVmMonitorLocation);
+
         setAnchor(myCommonOptionsForm.getAnchor());
+    }
+
+    @Override
+    public void setPyVmMonitorLocation(String location) {
+        myPyVmMonitorLocationTextField.setText(location);
+    }
+
+    @Override
+    public String getPyVmMonitorLocation() {
+        return myPyVmMonitorLocationTextField.getText().trim();
     }
 
     @Override
