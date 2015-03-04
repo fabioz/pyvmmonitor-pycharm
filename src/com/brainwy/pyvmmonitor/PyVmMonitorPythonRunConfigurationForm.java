@@ -27,7 +27,7 @@ import java.awt.event.ActionListener;
  */
 public class PyVmMonitorPythonRunConfigurationForm {
 
-    private final Project myProject;
+    private final boolean isGlobalSettingEditor;
     private JPanel myRootPanel;
     private JComponent anchor;
     private JLabel myInitialProfileModeLabel;
@@ -35,11 +35,14 @@ public class PyVmMonitorPythonRunConfigurationForm {
     private JLabel myPyVmMonitorLocationLabel;
     private TextFieldWithBrowseButton myPyVmMonitorLocationTextField;
 
-    public PyVmMonitorPythonRunConfigurationForm(AbstractPythonRunConfiguration configuration) {
-        myProject = configuration.getProject();
+    public PyVmMonitorPythonRunConfigurationForm(boolean isGlobalSettingEditor) {
+        this.isGlobalSettingEditor = isGlobalSettingEditor;
         myInitialProfileModeCombo.addItem("Deterministic (profile)");
         myInitialProfileModeCombo.addItem("Sampling (yappi)");
         myInitialProfileModeCombo.addItem("Don't start profiling");
+        if(!isGlobalSettingEditor){
+            myInitialProfileModeCombo.addItem("Use Global Setting");
+        }
 
         FileChooserDescriptor chooserDescriptor = new FileChooserDescriptor(true, false, false, false, false, false) {
             @Override
@@ -49,7 +52,7 @@ public class PyVmMonitorPythonRunConfigurationForm {
         };
 
         ComponentWithBrowseButton.BrowseFolderActionListener<JTextField> listenerPyVmMonitorLocation =
-                new ComponentWithBrowseButton.BrowseFolderActionListener<JTextField>("Select pyvmmonitor-ui location", "", myPyVmMonitorLocationTextField, myProject,
+                new ComponentWithBrowseButton.BrowseFolderActionListener<JTextField>("Select pyvmmonitor-ui location", "", myPyVmMonitorLocationTextField, null,
                         chooserDescriptor, TextComponentAccessor.TEXT_FIELD_WHOLE_TEXT) {
 
                     @Override
@@ -60,6 +63,10 @@ public class PyVmMonitorPythonRunConfigurationForm {
                 };
 
         myPyVmMonitorLocationTextField.addActionListener(listenerPyVmMonitorLocation);
+        if(!isGlobalSettingEditor){
+            myPyVmMonitorLocationLabel.setVisible(false);
+            myPyVmMonitorLocationTextField.setVisible(false);
+        }
     }
 
     public void setPyVmMonitorLocation(String location) {
@@ -78,6 +85,9 @@ public class PyVmMonitorPythonRunConfigurationForm {
         if (i == 1) {
             return PyVmMonitorRunExtension.PROFILE_MODE_YAPPI;
         }
+        if (i == 3) {
+            return PyVmMonitorRunExtension.PROFILE_MODE_INHERIT_GLOBAL;
+        }
         return PyVmMonitorRunExtension.PROFILE_MODE_NONE;
     }
 
@@ -87,6 +97,8 @@ public class PyVmMonitorPythonRunConfigurationForm {
             i = 0;
         } else if (initialProfileMode.equals(PyVmMonitorRunExtension.PROFILE_MODE_YAPPI)) {
             i = 1;
+        } else if (initialProfileMode.equals(PyVmMonitorRunExtension.PROFILE_MODE_INHERIT_GLOBAL)) {
+            i = 3;
         }
         myInitialProfileModeCombo.setSelectedIndex(i);
     }
