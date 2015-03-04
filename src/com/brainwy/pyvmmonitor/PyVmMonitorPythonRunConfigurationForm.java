@@ -25,30 +25,21 @@ import java.awt.event.ActionListener;
  * Form to be shown to the user in the editor. Similar to PythonRunConfigurationForm but with options related
  * to running PyVmMonitor.
  */
-public class PyVmMonitorPythonRunConfigurationForm implements PyVmMonitorPythonRunConfigurationParams, PanelWithAnchor {
+public class PyVmMonitorPythonRunConfigurationForm {
 
-    private JPanel myRootPanel;
-    private TextFieldWithBrowseButton myScriptTextField;
-    private RawCommandLineEditor myScriptParametersTextField;
-    private JPanel myCommonOptionsPlaceholder;
-    private JBLabel myScriptParametersLabel;
-    private final AbstractPyCommonOptionsForm myCommonOptionsForm;
-    private JComponent anchor;
     private final Project myProject;
-    private JBCheckBox myShowCommandLineCheckbox;
+    private JPanel myRootPanel;
+    private JComponent anchor;
     private JLabel myInitialProfileModeLabel;
     private JComboBox myInitialProfileModeCombo;
     private JLabel myPyVmMonitorLocationLabel;
     private TextFieldWithBrowseButton myPyVmMonitorLocationTextField;
 
-    public PyVmMonitorPythonRunConfigurationForm(PythonRunConfiguration configuration) {
-        myCommonOptionsForm = PyCommonOptionsFormFactory.getInstance().createForm(configuration.getCommonOptionsFormData());
-        myCommonOptionsPlaceholder.add(myCommonOptionsForm.getMainPanel(), BorderLayout.CENTER);
+    public PyVmMonitorPythonRunConfigurationForm(AbstractPythonRunConfiguration configuration) {
+        myProject = configuration.getProject();
         myInitialProfileModeCombo.addItem("Deterministic (profile)");
         myInitialProfileModeCombo.addItem("Sampling (yappi)");
         myInitialProfileModeCombo.addItem("Don't start profiling");
-
-        myProject = configuration.getProject();
 
         FileChooserDescriptor chooserDescriptor = new FileChooserDescriptor(true, false, false, false, false, false) {
             @Override
@@ -56,19 +47,6 @@ public class PyVmMonitorPythonRunConfigurationForm implements PyVmMonitorPythonR
                 return file.isDirectory() || file.getExtension() == null || Comparing.equal(file.getExtension(), "py");
             }
         };
-
-        ComponentWithBrowseButton.BrowseFolderActionListener<JTextField> listener =
-                new ComponentWithBrowseButton.BrowseFolderActionListener<JTextField>("Select Script", "", myScriptTextField, myProject,
-                        chooserDescriptor, TextComponentAccessor.TEXT_FIELD_WHOLE_TEXT) {
-
-                    @Override
-                    protected void onFileChosen(@NotNull VirtualFile chosenFile) {
-                        super.onFileChosen(chosenFile);
-                        myCommonOptionsForm.setWorkingDirectory(chosenFile.getParent().getPath());
-                    }
-                };
-
-        myScriptTextField.addActionListener(listener);
 
         ComponentWithBrowseButton.BrowseFolderActionListener<JTextField> listenerPyVmMonitorLocation =
                 new ComponentWithBrowseButton.BrowseFolderActionListener<JTextField>("Select pyvmmonitor-ui location", "", myPyVmMonitorLocationTextField, myProject,
@@ -82,87 +60,39 @@ public class PyVmMonitorPythonRunConfigurationForm implements PyVmMonitorPythonR
                 };
 
         myPyVmMonitorLocationTextField.addActionListener(listenerPyVmMonitorLocation);
-
-        setAnchor(myCommonOptionsForm.getAnchor());
     }
 
-    @Override
     public void setPyVmMonitorLocation(String location) {
         myPyVmMonitorLocationTextField.setText(location);
     }
 
-    @Override
     public String getPyVmMonitorLocation() {
         return myPyVmMonitorLocationTextField.getText().trim();
     }
 
-    @Override
-    public int getInitialProfileMode() {
-        return myInitialProfileModeCombo.getSelectedIndex();
+    public String getInitialProfileMode() {
+        int i = myInitialProfileModeCombo.getSelectedIndex();
+        if (i == 0) {
+            return PyVmMonitorRunExtension.PROFILE_MODE_LSPROF;
+        }
+        if (i == 1) {
+            return PyVmMonitorRunExtension.PROFILE_MODE_YAPPI;
+        }
+        return PyVmMonitorRunExtension.PROFILE_MODE_NONE;
     }
 
-    @Override
-    public void setInitialProfileMode(int initialProfileMode) {
-        myInitialProfileModeCombo.setSelectedIndex(initialProfileMode);
+    public void setInitialProfileMode(String initialProfileMode) {
+        int i = 2;
+        if (initialProfileMode.equals(PyVmMonitorRunExtension.PROFILE_MODE_LSPROF)) {
+            i = 0;
+        } else if (initialProfileMode.equals(PyVmMonitorRunExtension.PROFILE_MODE_YAPPI)) {
+            i = 1;
+        }
+        myInitialProfileModeCombo.setSelectedIndex(i);
     }
-
 
     public JComponent getPanel() {
         return myRootPanel;
-    }
-
-    @Override
-    public AbstractPythonRunConfigurationParams getBaseParams() {
-        return myCommonOptionsForm;
-    }
-
-    @Override
-    public String getScriptName() {
-        return FileUtil.toSystemIndependentName(myScriptTextField.getText().trim());
-    }
-
-    @Override
-    public void setScriptName(String scriptName) {
-        myScriptTextField.setText(scriptName == null ? "" : FileUtil.toSystemDependentName(scriptName));
-    }
-
-    @Override
-    public String getScriptParameters() {
-        return myScriptParametersTextField.getText().trim();
-    }
-
-    @Override
-    public void setScriptParameters(String scriptParameters) {
-        myScriptParametersTextField.setText(scriptParameters);
-    }
-
-    @Override
-    public boolean showCommandLineAfterwards() {
-        return myShowCommandLineCheckbox.isSelected();
-    }
-
-    @Override
-    public void setShowCommandLineAfterwards(boolean showCommandLineAfterwards) {
-        myShowCommandLineCheckbox.setSelected(showCommandLineAfterwards);
-    }
-
-    @Override
-    public JComponent getAnchor() {
-        return anchor;
-    }
-
-    public boolean isMultiprocessMode() {
-        return PyDebuggerOptionsProvider.getInstance(myProject).isAttachToSubprocess();
-    }
-
-    public void setMultiprocessMode(boolean multiprocess) {
-    }
-
-    @Override
-    public void setAnchor(JComponent anchor) {
-        this.anchor = anchor;
-        myScriptParametersLabel.setAnchor(anchor);
-        myCommonOptionsForm.setAnchor(anchor);
     }
 
 }

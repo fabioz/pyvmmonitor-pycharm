@@ -8,7 +8,7 @@ import com.intellij.openapi.ui.Messages;
 
 public class ToggleProfileAction extends AnAction {
 
-    public ToggleProfileAction(){
+    public ToggleProfileAction() {
         super("Toggle PyVmMonitor profile");
     }
 
@@ -16,5 +16,6 @@ public class ToggleProfileAction extends AnAction {
     public void actionPerformed(AnActionEvent event) {
         Project project = event.getData(PlatformDataKeys.PROJECT);
         System.out.println("Toggle PyVmMonitor profile");
+        this.getTemplatePresentation().setText("New");
     }
 }

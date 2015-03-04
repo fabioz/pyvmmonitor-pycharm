@@ -24,9 +24,18 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
-        <runConfigurationExtension implementation="com.brainwy.pyvmmonitor.PyVmMonitorRunExtension"/>
+        <!--
+        The extensions below were commented out: by using them we'd create a new run configuration type,
+        but in the end, the approach used was to extend all the existing run configurations instead so that
+        we can work with any existing launch configuration.
+
         <configurationType implementation="com.brainwy.pyvmmonitor.PyVmMonitorConfigurationType"/>
+        <executor implementation="com.brainwy.pyvmmonitor.PyVmMonitorExecutor" />
+        -->
+    </extensions>
+
+    <extensions defaultExtensionNs="Pythonid">
+        <runConfigurationExtension implementation="com.brainwy.pyvmmonitor.PyVmMonitorRunExtension"/>
     </extensions>
 
     <application-components>
