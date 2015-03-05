@@ -2,7 +2,7 @@
     <!-- Docs: https://confluence.jetbrains.com/display/IDEADEV/PluginDevelopment -->
     <id>com.brainwy.pyvmmonitor</id>
     <name>PyVmMonitor PyCharm integration</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <vendor email="fabiofz@gmail.com" url="http://pyvmmonitor.com">PyVmMonitor</vendor>
 
     <description><![CDATA[

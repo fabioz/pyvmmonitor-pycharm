@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f6775d4-d47b-4950-8358-ba07df5e2119" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java" afterPath="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
     </list>
     <ignored path="pyvmmonitor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PyVmMonitorRunExtension.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PyVmMonitorRunExtension.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.459375" vertical-offset="1641" max-vertical-offset="5025">
-              <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1641" max-vertical-offset="5025">
+              <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="960">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0921875" vertical-offset="1" max-vertical-offset="960">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -95,11 +95,11 @@
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.form" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/ToggleProfileAction.java" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/ConfigPyVmMonitor.java" />
-        <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/ConfigPyVmMonitorAction.java" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationEditor.java" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorPythonRunConfigurationForm.java" />
         <option value="$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java" />
+        <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
       </list>
     </option>
   </component>
@@ -1091,14 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="960">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/ConfigPyVmMonitorAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="1305">
@@ -1111,11 +1103,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/brainwy/pyvmmonitor/PyVmMonitorRunExtension.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.459375" vertical-offset="1641" max-vertical-offset="5025">
-          <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1641" max-vertical-offset="5025">
+          <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0921875" vertical-offset="1" max-vertical-offset="960">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
