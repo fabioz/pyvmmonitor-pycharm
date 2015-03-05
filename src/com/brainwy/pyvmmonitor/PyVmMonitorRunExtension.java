@@ -56,27 +56,44 @@ public class PyVmMonitorRunExtension extends PythonRunConfigurationExtension {
     }
 
     private static String getDefaultPyVmMonitorLocation() {
-        //TODO: Cover other platforms!
         //Reference: org.python.pydev.debug.profile.PyProfilePreferences
-        String location = null;
-        if (SystemInfo.isWindows) {
-            try {
+        File settings = null;
+
+        try {
+            if (SystemInfo.isMac) {
+                settings = new File(System.getProperty("user.home"), "Library");
+                settings = new File(settings, "Application Support");
+                settings = new File(settings, "Brainwy");
+                settings = new File(settings, "PyVmMonitor.ini");
+
+            } else if (SystemInfo.isLinux) {
+                settings = new File(System.getProperty("user.home"), ".config/Brainwy/pyvmmonitor.ini");
+
+            } else if (SystemInfo.isWindows) {
                 //It may not be available in all versions of windows, but if it is, let's use it...
                 String env = System.getenv("LOCALAPPDATA");
                 if (env != null && env.length() > 0 && new File(env).exists()) {
-                    File settings = new File(new File(env, "Brainwy"), "PyVmMonitor.ini");
-                    if (settings.exists()) {
-                        Properties props = new Properties();
-                        props.load(new FileInputStream(settings));
-                        String property = props.getProperty("pyvmmonitor_ui_executable");
-                        location = property;
-                    }
+                    settings = new File(new File(env, "Brainwy"), "PyVmMonitor.ini");
                 }
-            } catch (Exception e) {
-                Log.log(e);
             }
+        } catch (Exception e) {
+            Log.log(e);
         }
-        return location;
+        String defaultLocation = null;
+
+        try {
+            if (settings != null && settings.exists()) {
+                Properties props = new Properties();
+                props.load(new FileInputStream(settings));
+                String property = props.getProperty("pyvmmonitor_ui_executable");
+                if (property != null) {
+                    defaultLocation = property;
+                }
+            }
+        } catch (Exception e) {
+            Log.log(e);
+        }
+        return defaultLocation;
     }
 
     @Override
@@ -117,6 +134,18 @@ public class PyVmMonitorRunExtension extends PythonRunConfigurationExtension {
         if (location == null) {
             location = "";
         }
+
+        if (!new File(location).exists() || !new File(location).isFile()) {
+            if (SystemInfo.isMac) {
+                File f = new File(location, "Contents");
+                f = new File(f, "MacOS");
+                f = new File(f, "pyvmmonitor-ui");
+                if (f.exists()) {
+                    return f.getAbsolutePath();
+                }
+            }
+        }
+
 
         return location;
     }
