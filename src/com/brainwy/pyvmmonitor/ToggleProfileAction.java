@@ -14,7 +14,7 @@ public class ToggleProfileAction extends AnAction {
     }
 
     private static String getCurrentText() {
-        if(PyVmMonitorRunExtension.isProfileOn()){
+        if (PyVmMonitorRunExtension.isProfileOn()) {
             return "Enable profile for new launches: On";
         }
         return "Enable profile for new launches: Off";
@@ -23,9 +23,9 @@ public class ToggleProfileAction extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent event) {
         PropertiesComponent instance = PropertiesComponent.getInstance();
-        if(PyVmMonitorRunExtension.isProfileOn()){
+        if (PyVmMonitorRunExtension.isProfileOn()) {
             instance.setValue(PyVmMonitorRunExtension.PROFILE_ON, "false");
-        }else{
+        } else {
             instance.setValue(PyVmMonitorRunExtension.PROFILE_ON, "true");
         }
         event.getPresentation().setText(getCurrentText());

@@ -12,7 +12,8 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 
 /**
- * This will provide us with an editor to show to the user. Mostly, this is just a wrapper for the form...
+ * This will provide us with an editor to show to the user (for a launch configuration).
+ * Mostly, this is just a wrapper for the form...
  */
 public class PyVmMonitorPythonRunConfigurationEditor extends SettingsEditor<AbstractPythonRunConfiguration> {
 
@@ -27,7 +28,7 @@ public class PyVmMonitorPythonRunConfigurationEditor extends SettingsEditor<Abst
         if (initialProfileMode == null) {
             initialProfileMode = "";
         }
-        if (!PyVmMonitorRunExtension.isValidInitialProfileMode(initialProfileMode.toString())) {
+        if (!PyVmMonitorRunExtension.isValidInitialProfileMode(initialProfileMode.toString(), true)) {
             initialProfileMode = PyVmMonitorRunExtension.PROFILE_MODE_INHERIT_GLOBAL;
         }
 

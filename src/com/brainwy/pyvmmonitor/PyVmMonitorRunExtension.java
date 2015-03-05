@@ -29,18 +29,24 @@ public class PyVmMonitorRunExtension extends PythonRunConfigurationExtension {
     public static final String PROFILE_ON = "PROFILE_ON"; // empty, "false" or "true"
 
     public static final String PROFILE_MODE_YAPPI = "YAPPI";
-    public static final String PROFILE_MODE_LSPROF = "DETERMINISTIC";
+    public static final String PROFILE_MODE_LSPROF = "LSPROF";
     public static final String PROFILE_MODE_NONE = "NONE";
     public static final String PROFILE_MODE_INHERIT_GLOBAL = "INHERIT_GLOBAL";
 
     public static final Key<Object> KEY_INITIAL_PROFILE_MODE = Key.create(PyVmMonitorRunExtension.INITIAL_PROFILE_MODE);
 
 
-    public static boolean isValidInitialProfileMode(String profileMode) {
+    public static boolean isValidInitialProfileMode(String profileMode, boolean acceptGlobal) {
         if (profileMode == null) {
             return false;
         }
-        return profileMode.equals(PROFILE_MODE_LSPROF) || profileMode.equals(PROFILE_MODE_YAPPI) || profileMode.equals(PROFILE_MODE_NONE) || profileMode.equals(PROFILE_MODE_INHERIT_GLOBAL);
+        if(acceptGlobal){
+            if(profileMode.equals(PROFILE_MODE_INHERIT_GLOBAL)){
+                return true;
+            }
+        }
+        return profileMode.equals(PROFILE_MODE_LSPROF) || profileMode.equals(PROFILE_MODE_YAPPI) ||
+                profileMode.equals(PROFILE_MODE_NONE);
     }
 
     @Override
@@ -102,27 +108,27 @@ public class PyVmMonitorRunExtension extends PythonRunConfigurationExtension {
         return true;
     }
 
-    public static String getGlobalPyVmMonitorLocation(){
+    public static String getGlobalPyVmMonitorLocation() {
         PropertiesComponent instance = PropertiesComponent.getInstance();
         String location = instance.getValue(PyVmMonitorRunExtension.PY_VM_MONITOR_LOCATION);
         if (location == null || location.toString().length() == 0 || !new File(location.toString()).exists()) {
             location = getDefaultPyVmMonitorLocation();
         }
-        if(location == null){
+        if (location == null) {
             location = "";
         }
 
         return location;
-
     }
-    public static String getGlobalInitialProfileMode(){
+
+    public static String getGlobalInitialProfileMode() {
         PropertiesComponent instance = PropertiesComponent.getInstance();
         String initialProfileMode = instance.getValue(PyVmMonitorRunExtension.INITIAL_PROFILE_MODE);
 
         if (initialProfileMode == null) {
             initialProfileMode = "";
         }
-        if (!PyVmMonitorRunExtension.isValidInitialProfileMode(initialProfileMode.toString())) {
+        if (!PyVmMonitorRunExtension.isValidInitialProfileMode(initialProfileMode.toString(), false)) {
             initialProfileMode = PyVmMonitorRunExtension.PROFILE_MODE_LSPROF;
         }
 
@@ -130,24 +136,24 @@ public class PyVmMonitorRunExtension extends PythonRunConfigurationExtension {
     }
 
     public static void setGlobalInitialProfileMode(String globalInitialProfileMode) {
-        if(isValidInitialProfileMode(globalInitialProfileMode)){
+        if (isValidInitialProfileMode(globalInitialProfileMode, false)) {
             PropertiesComponent instance = PropertiesComponent.getInstance();
             instance.setValue(PyVmMonitorRunExtension.INITIAL_PROFILE_MODE, globalInitialProfileMode);
         }
     }
 
     public static void setGlobalInitialLocation(String globalInitialLocation) {
-        if(globalInitialLocation != null && new File(globalInitialLocation).exists()){
+        if (globalInitialLocation != null && new File(globalInitialLocation).exists()) {
             PropertiesComponent instance = PropertiesComponent.getInstance();
             instance.setValue(PyVmMonitorRunExtension.PY_VM_MONITOR_LOCATION, globalInitialLocation);
         }
     }
 
 
-    public static boolean isProfileOn(){
+    public static boolean isProfileOn() {
         PropertiesComponent instance = PropertiesComponent.getInstance();
         String profileOn = instance.getValue(PyVmMonitorRunExtension.PROFILE_ON);
-        if(profileOn != null && profileOn.equals("true")){
+        if (profileOn != null && profileOn.equals("true")) {
             return true;
         }
         return false;
@@ -157,7 +163,7 @@ public class PyVmMonitorRunExtension extends PythonRunConfigurationExtension {
     @Override
     protected void patchCommandLine(AbstractPythonRunConfiguration configuration, @Nullable RunnerSettings runnerSettings, GeneralCommandLine cmdLine, String runnerId) throws ExecutionException {
         //Reference: org.python.pydev.debug.profile.PyProfilePreferences.addProfileArgs(List<String>, boolean, boolean)
-        if(!isProfileOn()){
+        if (!isProfileOn()) {
             return;
         }
 
@@ -267,7 +273,7 @@ public class PyVmMonitorRunExtension extends PythonRunConfigurationExtension {
         if (initialProfileMode == null) {
             initialProfileMode = "";
         }
-        if (!PyVmMonitorRunExtension.isValidInitialProfileMode(initialProfileMode.toString())) {
+        if (!PyVmMonitorRunExtension.isValidInitialProfileMode(initialProfileMode.toString(), true)) {
             initialProfileMode = PyVmMonitorRunExtension.PROFILE_MODE_INHERIT_GLOBAL;
         }
         return initialProfileMode.toString();

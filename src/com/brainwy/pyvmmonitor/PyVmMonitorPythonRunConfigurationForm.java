@@ -40,7 +40,7 @@ public class PyVmMonitorPythonRunConfigurationForm {
         myInitialProfileModeCombo.addItem("Deterministic (profile)");
         myInitialProfileModeCombo.addItem("Sampling (yappi)");
         myInitialProfileModeCombo.addItem("Don't start profiling");
-        if(!isGlobalSettingEditor){
+        if (!isGlobalSettingEditor) {
             myInitialProfileModeCombo.addItem("Use Global Setting");
         }
 
@@ -63,7 +63,7 @@ public class PyVmMonitorPythonRunConfigurationForm {
                 };
 
         myPyVmMonitorLocationTextField.addActionListener(listenerPyVmMonitorLocation);
-        if(!isGlobalSettingEditor){
+        if (!isGlobalSettingEditor) {
             myPyVmMonitorLocationLabel.setVisible(false);
             myPyVmMonitorLocationTextField.setVisible(false);
         }
