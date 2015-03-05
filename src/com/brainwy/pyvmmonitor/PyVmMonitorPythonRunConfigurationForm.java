@@ -47,7 +47,7 @@ public class PyVmMonitorPythonRunConfigurationForm {
         FileChooserDescriptor chooserDescriptor = new FileChooserDescriptor(true, false, false, false, false, false) {
             @Override
             public boolean isFileVisible(VirtualFile file, boolean showHiddenFiles) {
-                return file.isDirectory() || file.getExtension() == null || Comparing.equal(file.getExtension(), "py");
+                return file.isDirectory() || file.getName().toLowerCase().startsWith("pyvmmonitor");
             }
         };
 
@@ -58,7 +58,7 @@ public class PyVmMonitorPythonRunConfigurationForm {
                     @Override
                     protected void onFileChosen(@NotNull VirtualFile chosenFile) {
                         super.onFileChosen(chosenFile);
-                        setPyVmMonitorLocation(chosenFile.getParent().getPath());
+                        setPyVmMonitorLocation(chosenFile.getPath());
                     }
                 };
 
